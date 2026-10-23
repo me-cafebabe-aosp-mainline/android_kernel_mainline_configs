@@ -13,7 +13,7 @@ kernel build rules (`vendor/lineage/build/tasks/kernel.mk`).
 | `fragments/android-base-pre/` | Android requirements that the kernel does not meet by default, with the dependencies they need (see its README) |
 | `fragments/android-base-conditional/` | The conditional requirements of Android (`CONFIG_ARM64=y`, `CONFIG_X86_64=y`, ...) |
 | `fragments/common.config` | Options commonly missing or mismatching in every kernel configuration |
-| `fragments/y/` | Optional features to enable (`fbcon.config`, `arm64/pagesize-16k.config`) |
+| `fragments/y/` | Optional features to enable (`fbcon.config`, `compressed-modules.config`, `compressed-firmware.config`, `arm64/pagesize-16k.config`) |
 | `fragments/n/` | Optional features to disable (faster builds, Go devices, no Rust, ...) |
 | `utilities/validate_kernel_config.py` | Checks a `.config` against a fragment |
 | `utilities/generate_modules_load.py` | Lists the modules of the options of fragments when they are `=m`, without their dependencies (see `modprobe/modules.load`; no kernel build needed) |
