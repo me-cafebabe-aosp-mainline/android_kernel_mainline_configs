@@ -16,6 +16,8 @@ kernel build rules (`vendor/lineage/build/tasks/kernel.mk`).
 | `fragments/y/` | Optional features to enable (`fbcon.config`, `arm64/pagesize-16k.config`) |
 | `fragments/n/` | Optional features to disable (faster builds, Go devices, no Rust, ...) |
 | `utilities/validate_kernel_config.py` | Checks a `.config` against a fragment |
+| `utilities/generate_modules_load.py` | Lists the modules of the options of fragments when they are `=m`, without their dependencies (see `modprobe/modules.load`; no kernel build needed) |
+| `modprobe/modules.load` | The modules to load for the options that Android needs, whatever the kernel and architecture; collected with the script above |
 | `init/` | init scripts for the kernel features above |
 
 The Android requirements themselves are not copied here. They come from
