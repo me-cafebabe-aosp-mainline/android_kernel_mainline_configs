@@ -1,2 +1,2 @@
 on load-bpf-programs
-    setprop sys.use_memfd true
+    setprop sys.use_memfd ${ro.boot.use_memfd:-true}
